@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.main-container {
+  margin: 20px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-container label {
+  font-weight: 500;
+  color: #444;
+}
+
+.main-container select {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-container select:hover {
+  border-color: #d32f2f;
+}
+
+.showCase {
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.showCase li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.screen {
+  background-color: #e0e0e0;
+  height: 60px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.seat {
+  background-color: #ccc;
+  height: 24px;
+  width: 28px;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.seat.selected {
+  background-color: #d32f2f;
+  box-shadow: 0 2px 8px rgba(211, 47, 47, 0.6);
+}
+
+.seat.occupied {
+  background-color: #757575;
+  cursor: not-allowed;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  background-color: #f44336;
+}
+
+.showCase .seat:not(.occupied):hover {
+  transform: none;
+  background-color: #ccc;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 20px;
+}
+.seat:nth-last-of-type(2) {
+  margin-left: 20px;
+}
+
+p.text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+}
+
+p.text span {
+  color: #d32f2f;
+  font-weight: 700;
+}
